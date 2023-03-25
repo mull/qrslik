@@ -1,0 +1,9 @@
+{
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "slonik": "^33.1.4",
+    "zod": "^3.21.4"
+  }
+}
