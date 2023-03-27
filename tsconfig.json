@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "composite": true
+  },
+  "references": [
+    { "path": "packages/qrslik-core" },
+    { "path": "packages/qrslik" }
+  ]
+}

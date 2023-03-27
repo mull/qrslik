@@ -1,4 +1,9 @@
-import { IdentifierSqlToken, PrimitiveValueExpression, sql } from "slonik"
+import {
+  IdentifierSqlToken,
+  PrimitiveValueExpression,
+  SqlFragment,
+  sql,
+} from "slonik"
 import { z } from "zod"
 import { SlonikQueryWithSelection, ValueRecord, intoArray } from "./utils"
 import { insert } from "./commands/insert"
@@ -10,6 +15,7 @@ export { insert, update, select }
 export interface View<T extends z.ZodRawShape> {
   identifier: IdentifierSqlToken
   alias?: IdentifierSqlToken
+
   /**
    * Shorthand for selecting all columns of a view
    */

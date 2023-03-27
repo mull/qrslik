@@ -1,0 +1,14 @@
+{
+  "name": "qrslik-ast",
+  "license": "MIT",
+  "author": "Emil Ahlbäck <emil.ahlback@gmail.com>",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsup src/index.ts"
+  },
+  "peerDependencies": {
+    "slonik": "^33.1.4",
+    "zod": "^3.21.4"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "qrslik-gen",
+  "version": "0.0.1",
+  "description": "CLI generators for qrslik",
+  "bin": "dist/cli.js",
+  "scripts": {
+    "build": "tsup src/cli.ts"
+  },
+  "author": "Emil Ahlbäck <emil.ahlback@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "qrslik-core": "*",
+    "slonik": "^33.1.4",
+    "zod": "^3.21.4"
+  }
+}

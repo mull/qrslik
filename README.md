@@ -8,8 +8,12 @@ Some of its goals are:
 - The same safety guarantees that slonik offers
 - Type inferrence on par with Zod
 
+It's main tool is the npm package qrslik, installable like so:
+```
+npm i qrslik
+```
 
-# Example
+## Example
 Given this table:
 
 ```sql
@@ -53,4 +57,24 @@ await slonik.query(
 )
 ```
 
+## Schema generation
+qrslik-code-gen provides a way to map your Postgres tables into zod schemas.
 
+```
+POSTGRES_URL=postgresql://@localhost/qrslik npx qrslik-code-gen ./schemas.ts
+[qrslik-code-gen]
+  output_path: /Users/emil/query-builder-idea/schemas.ts
+
+All done!
+```
+
+That file can then be used to provide functions like `createTable` with a schema, without having to write it by hand.
+
+Note that Postgres constraints and/or checks are not translated into constraints on the Zod schemas, though that may be at least partially implemented in the future.
+
+```ts
+import { makeTable } from 'qrslik'
+import { PostsTableSchema } from './schema'
+
+const PostsTable = makeTable("posts", PostsTableSchema)
+```

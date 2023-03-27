@@ -7,6 +7,7 @@ export const intoPrimitive = (value: any): PrimitiveValueExpression => {
   return definitely
 }
 
+// uhm.. what should this be called?!
 export function evenMorePrimitive(parser: any, value: any) {
   // we identify this as json
   if (parser instanceof z.ZodAny) {
